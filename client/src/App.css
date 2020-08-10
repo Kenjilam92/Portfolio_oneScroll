@@ -80,3 +80,24 @@ body{
   background-size: cover;
 } */
 
+/* Projects page */
+
+.projectButton {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.projectTitle{
+  transition: .5s ease;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52,58,64,0.9);
+  font-weight: bolder;
+}
+.projectButton:hover .projectTitle{
+  opacity: 1;
+}

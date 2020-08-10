@@ -16,7 +16,7 @@ const AboutMe = props =>{
     arrows: false,
     focusOnSelect: true
   };
-
+  
   return(
       <div className={`${props.className}`} style={props.style}>
         <h3 className="font-weight-bold text-warning text-md-left text-center">About Me</h3>

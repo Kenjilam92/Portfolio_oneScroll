@@ -3,10 +3,13 @@ import React from "react";
 import ScrollableSection, { ScrollableLink } from 'react-scrollable-url';
 ////
 
-import ProjectList from "./Public/ProjectList";
+// import ProjectList from "./Public/ProjectList";
 import Contact from "./Public/Contact";
 import Aboutme from "./Public/AboutMe";
 import Home from "./Public/Home";
+import Test from "./Public/Test";
+
+
 const Laptop = props =>{
     const img1 = "/images/kenjilam_baltimore.png";
     const backGround = {
@@ -59,9 +62,14 @@ const Laptop = props =>{
             />
         
 
-            <ProjectList
+            {/* <ProjectList
                 className=""
                 style={SectionsHeight} 
+            /> */}
+
+            <Test
+                className="text-white"
+                style={SectionsHeight}
             />
 
             <Contact
@@ -69,6 +77,8 @@ const Laptop = props =>{
                 Theme={props.Theme}
                 style={SectionsHeight} 
             />
+
+            
         </div>
 
         
