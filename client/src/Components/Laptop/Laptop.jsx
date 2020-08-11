@@ -70,6 +70,7 @@ const Laptop = props =>{
             <Test
                 className="text-white"
                 style={SectionsHeight}
+                Theme={props.Theme}
             />
 
             <Contact

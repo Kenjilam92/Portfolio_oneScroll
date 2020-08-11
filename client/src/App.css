@@ -101,3 +101,9 @@ body{
 .projectButton:hover .projectTitle{
   opacity: 1;
 }
+
+.rotateLeft{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}

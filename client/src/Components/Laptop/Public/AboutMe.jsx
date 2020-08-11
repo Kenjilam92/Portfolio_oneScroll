@@ -9,12 +9,28 @@ const AboutMe = props =>{
     infinite: true,
     autoplay: true,
     speed: 1000,
-    autoplaySpeed: 10,
-    slidesToShow: 7,
+    autoplaySpeed: 20,
+    slidesToShow: 12,
     slidesToScroll: 1,
     swipe: true,
     arrows: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 8,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+        }
+      }
+    ],
   };
   
   return(

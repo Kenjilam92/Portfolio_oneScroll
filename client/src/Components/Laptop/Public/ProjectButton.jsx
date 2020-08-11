@@ -22,28 +22,28 @@ const ProjectButton = props =>{
 
     const background = {
         backgroundColor: "white",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.info}, 0.8)), url("${props.logo}")`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.primary}, 0.8)), url("${props.logo}")`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 15+"vw",
-        width: 15+"vw",
+        height: 15+"vh",
+        width: 15+"vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 2+"vw",
+        fontSize: 2+"vh",
     }
     const end = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.info}, 0.8)), url('images/project/more.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.primary}, 0.8)), url('images/project/more.png')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 15+"vw",
-        width: 15+"vw",
+        height: 15+"vh",
+        width: 15+"vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 2+"vw"
+        fontSize: 2+"vh"
     };
     return(
         <>
