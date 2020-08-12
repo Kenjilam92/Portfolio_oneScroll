@@ -35,7 +35,7 @@ const AboutMe = props =>{
   
   return(
       <div className={`${props.className}`} style={props.style}>
-        <h3 className="font-weight-bold text-warning text-md-left text-center">About Me</h3>
+        <p className="h1 font-weight-bold text-warning text-md-left text-center">About Me</p>
         <p className="text-wrap">
           Hello,<br/>
           My name is <span className="text-warning font-weight-bold ">Kenji</span>! I am a digital marketing specialist and full-stack website developer. I have seven years of experience in building websites and developing online marketing strategies. One of my previous projects is even located within the top 3 results of Google Search! This expertise provides my clients with greater access to their targeted population. With my help, you can achieve high visibility and increase web traffic on all major search engines, such as Google, Bing, and Yahoo.

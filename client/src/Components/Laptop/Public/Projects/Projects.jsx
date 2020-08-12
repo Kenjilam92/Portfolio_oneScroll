@@ -1,25 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import ProjectButton from "./ProjectButton";
 import ProjectDetails from "./ProjectDetails";
-import Carousel from "react-slick";
+import projectsList from "./ProjectList"
+// import Carousel from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Test = props =>{
-    const projectsList = [
-        { 
-            title: "vanhoagroup",
-            logo: "/images/project/vanhoagroup/vanhoagroupicon.png"
-        },
-        { 
-            title: "The Flashcards Game",
-            logo: "/images/project/flashcard/flashcardsgameicon.png"
-        },
-        { 
-            title: "My Portfolio",
-            logo: "/images/project/myportfolio/portfolioicon.png"
-        }
-    ];
+const Projects = props =>{
+    const [projectName,setProjectName] = useState("vanhoagroup");
 
     // const settings = {
     //     dots: true,
@@ -27,7 +16,7 @@ const Test = props =>{
     //     autoplay: true,
     //     speed: 1000,
     //     autoplaySpeed: 10,
-    //     slidesToShow: 4,
+    //     slidesToShow: 3,
     //     slidesToScroll: 1,
     //     swipe: true,
     //     arrows: true,
@@ -35,12 +24,9 @@ const Test = props =>{
     // };
 
     return(
-        <div className={`${props.className} d-flex`} style={props.style}>
-            <ProjectDetails
-                className="text-white"
-                Theme={props.Theme}
-            />
-            <div className="">
+        <div className={`${props.className} d-flex flex-column`} style={props.style}>
+            <p className="h1 text-warning">Projects</p>
+            <div className="d-flex align-self-start">
                 {/* <Carousel {...settings}> */}
                 {/* </Carousel>   */} 
                 {projectsList.map((e,i)=><>
@@ -48,13 +34,19 @@ const Test = props =>{
                         key={i}
                         title={e.title}
                         logo={e.logo}
+                        selectProject={setProjectName}
                     />
                 </>)}
                 <ProjectButton end= {true} />
             </div>
-            
+            <ProjectDetails
+                className="text-white"
+                style={{backgroundColor: "rgba(0, 0, 0, 0.5)"}}
+                Theme={props.Theme}
+                Project={projectsList.find( p => p.title===projectName)}
+            />
         </div>
     );
 }
 
-export default Test;
+export default Projects;

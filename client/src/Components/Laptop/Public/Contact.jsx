@@ -5,7 +5,7 @@ import SendMessage from "./SendMessage";
 const Contact = props =>{
     return (     
       <div className={`${props.className}`} style={props.style}>
-        <p className="text-warning h2"> Contact </p>
+        <p className="text-warning h1"> Contact </p>
         <Info/>
         <SendMessage 
           Theme={props.Theme}

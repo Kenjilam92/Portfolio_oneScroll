@@ -2,9 +2,9 @@ import React from "react";
 
 const ProjectButton = props =>{
     
-    const selectProject = e =>{
-        // props.showDetails(props.title);
-        console.log(props.title);
+    const selectProject = () =>{
+    //     // props.showDetails(props.title);
+        props.selectProject(props.title);
     }
     
     const theme ={
@@ -22,35 +22,34 @@ const ProjectButton = props =>{
 
     const background = {
         backgroundColor: "white",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.primary}, 0.8)), url("${props.logo}")`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.dark}, 0.8)), url("${props.logo}")`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 15+"vh",
-        width: 15+"vh",
+        height: 12+"vw",
+        width: 12+"vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 2+"vh",
+        fontSize: 1.5+"vw",
     }
     const end = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.primary}, 0.8)), url('images/project/more.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.dark}, 0.8)), url('images/project/more.png')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 15+"vh",
-        width: 15+"vh",
+        height: 12+"vw",
+        width: 12+"vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 2+"vh"
+        fontSize: 1.5+"vh"
     };
     return(
         <>
         {props.end?
         <div key={props.key} className={`${props.className} shadow-lg rounded-sm m-2 projectButton`} 
             style={end}
-            onClick={e=> selectProject()}
         >   
             <div className="projectTitle rounded-sm">
                 <img className="w-100 p-100" src="/images/project/comingsoon.jpg" alt="coming soon"/>

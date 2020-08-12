@@ -1,13 +1,12 @@
 import React from "react";
 // import { useRef, useEffect, createRef } from "react";
-import ScrollableSection, { ScrollableLink } from 'react-scrollable-url';
 ////
 
 // import ProjectList from "./Public/ProjectList";
 import Contact from "./Public/Contact";
 import Aboutme from "./Public/AboutMe";
 import Home from "./Public/Home";
-import Test from "./Public/Test";
+import Projects from "./Public/Projects/Projects";
 
 
 const Laptop = props =>{
@@ -27,7 +26,7 @@ const Laptop = props =>{
     };
 
     const SectionsHeight = {
-        width: 68+"%",
+        width: 65+"%",
         minHeight: 70+"vh",
         marginBottom: 30+"vh"
         // overflow: "auto",
@@ -67,7 +66,7 @@ const Laptop = props =>{
                 style={SectionsHeight} 
             /> */}
 
-            <Test
+            <Projects
                 className="text-white"
                 style={SectionsHeight}
                 Theme={props.Theme}
