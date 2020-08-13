@@ -45,12 +45,13 @@ function App() {
   ///////// Theme config
   const [Theme,setTheme] = useState({
     bg: "bg-transparent",
-    btn: "btn text-white bg-transparent border border-white"
+    btn: "btn text-white bg-transparent border border-white",
+    text: "text-white"
   });
   
   /////////// Render
   return(
-    <div className="h-100">
+    <>
       {matches?
       <Phone
         LoginStatus = {LoginStatus}
@@ -70,7 +71,7 @@ function App() {
         setTheme = {setTheme}
       />
       }
-    </div>
+    </>
   );
 }
 

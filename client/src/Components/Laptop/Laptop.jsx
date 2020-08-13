@@ -17,9 +17,6 @@ const Laptop = props =>{
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        // position: "absolute",
-        // top: 0,
-        // left: 0,
         overflow: "scroll",
     };
 
@@ -27,17 +24,8 @@ const Laptop = props =>{
         width: 100+"%",
         minHeight: 70+"vh",
         marginBottom: 30+"vh",
-        // overflow: "auto",
-        // display:"block" 
     }
 
-    
-    ///////Scroll
-    // const scrollArea = useRef();
-    // const top = createRef();
-    // const onScroll = e => (top.current = e.target.scrollTop)
-    // useEffect(() => void onScroll({ target: scrollArea.current }), [])
-    
     ///////Menu
     const MenuAPI =[
         {
@@ -66,7 +54,6 @@ const Laptop = props =>{
         }
     ]
     
-
     const showSection = (e) =>{
         var selectedLocation = document.getElementById(e);
         selectedLocation.scrollIntoView({ behavior: "smooth" });
@@ -92,6 +79,7 @@ const Laptop = props =>{
                     zIndex: 5
                 }}   
             />
+
             <SocialLink
                 className="d-flex flex-column position-fixed"
                 style={{
@@ -103,6 +91,7 @@ const Laptop = props =>{
                     width: 50+"px"
                 }}
             />
+
             <Home
                 className="text-white text-center text-nowrap pt-5 w-100" 
                 Theme={props.Theme}
@@ -111,39 +100,29 @@ const Laptop = props =>{
                 id="Home"
                 click={showSection}
             />
+
             <div className="col" style={{width: 65+"vw", height:"fit-content", position:"relative", right:0}}>
+                <Aboutme
+                    className="text-white"
+                    style={SectionsHeight} 
+                    id="AboutMe"
+                />
 
-            
-            <Aboutme
-                className="text-white"
-                style={SectionsHeight} 
-                id="AboutMe"
-            />
-        
+                <Projects
+                    className="text-white"
+                    style={SectionsHeight}
+                    Theme={props.Theme}
+                    id="Projects"
+                />
 
-            {/* <ProjectList
-                className=""
-                style={SectionsHeight} 
-            /> */}
-
-            <Projects
-                className="text-white"
-                style={SectionsHeight}
-                Theme={props.Theme}
-                id="Projects"
-            />
-
-            <Contact
-                className="text-white "
-                Theme={props.Theme}
-                style={SectionsHeight}
-                id="Contact"
-            />
+                <Contact
+                    className="text-white "
+                    Theme={props.Theme}
+                    style={SectionsHeight}
+                    id="Contact"
+                />
             </div>
-            
         </div>
-
-        
         </>
     );
 }
