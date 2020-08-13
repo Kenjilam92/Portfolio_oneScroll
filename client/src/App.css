@@ -104,6 +104,6 @@ body{
 
 .rotateLeft{
   writing-mode: vertical-rl;
-  text-orientation: mixed;
+  /* text-orientation: mixed; */
   transform: rotate(180deg);
 }

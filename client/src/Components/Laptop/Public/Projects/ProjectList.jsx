@@ -39,16 +39,6 @@ const ProjectList = [
               desc: "Home Page" 
           },
           {
-              imglink:"/images/project/vanhoagroup/seoresult.png",
-              imgalt: "vanhoagroup.com",
-              desc: "Google Search Results" 
-          },
-          {
-              imglink:"/images/project/vanhoagroup/viewproduct.png",
-              imgalt: "vanhoagroup.com",
-              desc: "View Product" 
-          },
-          {
               imglink:"/images/project/vanhoagroup/products.png",
               imgalt: "vanhoagroup.com",
               desc: "Products Page" 
@@ -59,9 +49,19 @@ const ProjectList = [
               desc: "Other Product Page" 
           },
           {
+              imglink:"/images/project/vanhoagroup/viewproduct.png",
+              imgalt: "vanhoagroup.com",
+              desc: "View Product" 
+          },
+          {
               imglink:"/images/project/vanhoagroup/mobileverson.png",
               imgalt: "vanhoagroup.com",
               desc: "Mobile Verson" 
+          },
+          {
+              imglink:"/images/project/vanhoagroup/seoresult.png",
+              imgalt: "vanhoagroup.com",
+              desc: "Google Search Results" 
           }
       ]
     },
@@ -126,14 +126,39 @@ const ProjectList = [
       images:[
           {
               imglink:"/images/project/flashcard/flashcardsgame.png",
-              imgalt: "",
+              imgalt: "flashcardgame",
               desc: "Home Page" 
+          },
+          {
+            imglink:"/images/project/flashcard/displayconfig.png",
+            imgalt: "configdisplay",
+            desc: "Config display" 
+          },
+          {
+            imglink:"/images/project/flashcard/flippingcard.png",
+            imgalt: "flippingcard",
+            desc: "Flipping cards visual effect" 
+          },
+          {
+            imglink:"/images/project/flashcard/report.png",
+            imgalt: "report",
+            desc: "Unsuccessful Report" 
+          },
+          {
+            imglink:"/images/project/flashcard/editcards.png",
+            imgalt: "CRUDcards",
+            desc: "Add, Edit, & Delete Cards " 
+          },
+          {
+            imglink:"/images/project/flashcard/mobileverson.png",
+            imgalt: "mobileverson",
+            desc: "Mobile Verson" 
           }
       ]
     },
     { 
-      title: "My Portfolio",
-      logo: "/images/project/myportfolio/portfolioicon.png",
+      title: "My Portfolio (v.1.0)",
+      logo: "/images/project/myportfolio/portfolioicon.ico",
       url: "https://github.com/Kenjilam92/portfolio",
       features: [
         "Mobile - Friendly",
@@ -207,11 +232,46 @@ const ProjectList = [
         }
       ],
       images:[
-          {
-              imglink:"/images/project/myportfolio/portfolio.png",
-              imgalt: "kenjilam",
-              desc: "" 
-          }
+        {
+            imglink:"/images/project/myportfolio/laptophomepage.png",
+            imgalt: "kenjilam",
+            desc: "Laptop Home Page" 
+        },
+        {
+          imglink:"/images/project/myportfolio/responsive4k.png",
+          imgalt: "responsive4k",
+          desc: "Responsive 4K screen Display" 
+        },
+        {
+          imglink:"/images/project/myportfolio/responsivelaptop.png",
+          imgalt: "responsivelaptop",
+          desc: "Responsive Laptop Display" 
+        },
+        {
+          imglink:"/images/project/myportfolio/responsivetablet.png",
+          imgalt: "responsivetablet",
+          desc: "Responsive Tablet Display" 
+        },
+        {
+          imglink:"/images/project/myportfolio/validation.png",
+          imgalt: "validationform",
+          desc: "Complex Form Validation" 
+        },
+        {
+          imglink:"/images/project/myportfolio/phonemenu.png",
+          imgalt: "Togglemenu",
+          desc: "Toggle Menu" 
+        },        
+        {
+          imglink:"/images/project/myportfolio/responsivephone.png",
+          imgalt: "responsivephone",
+          desc: "Responsive Phone Display" 
+        },
+        {
+          imglink:"/images/project/myportfolio/phonehomepage.png",
+          imgalt: "kenjilam",
+          desc: "Phone Home Page" 
+        }
       ]
     }
 ];

@@ -26,29 +26,29 @@ const ProjectButton = props =>{
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 12+"vw",
-        width: 12+"vw",
+        height: 9+"vw",
+        width: 9+"vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 1.5+"vw",
+        fontSize: 1+"vw",
     }
     const end = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(${theme.dark}, 0.8)), url('images/project/more.png')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 12+"vw",
-        width: 12+"vw",
+        height: 9+"vw",
+        width: 9+"vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 1.5+"vh"
+        fontSize: 1+"vh"
     };
     return(
         <>
         {props.end?
-        <div key={props.key} className={`${props.className} shadow-lg rounded-sm m-2 projectButton`} 
+        <div key={props.keymap} className={`${props.className} shadow-lg rounded-sm m-2 projectButton`} 
             style={end}
         >   
             <div className="projectTitle rounded-sm">

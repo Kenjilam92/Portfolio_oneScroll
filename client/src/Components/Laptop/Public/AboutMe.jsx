@@ -34,7 +34,7 @@ const AboutMe = props =>{
   };
   
   return(
-      <div className={`${props.className}`} style={props.style}>
+      <div id={props.id} className={`${props.className}`} style={props.style}>
         <p className="h1 font-weight-bold text-warning text-md-left text-center">About Me</p>
         <p className="text-wrap">
           Hello,<br/>

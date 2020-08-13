@@ -2,12 +2,13 @@ import React from "react";
 
 const GalleryItems = props =>{
     const imgStyle ={
-        backgroundImage: `url(${props.imgLink})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.imgLink})`,
         backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        width: 100+"%",
-        height: 14+"vw",
+        maxwidth: 100+"%",
+        minWidth: 20+"vh",  
+        height: 20+"vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -19,7 +20,7 @@ const GalleryItems = props =>{
              onClick={e=>props.clicked(props.imgLink)} 
              data-toggle={props.dataToggle}
              data-target={props.dataTarget}
-             key={props.key}>
+             key={props.keymap}>
             <div style={imgStyle} >
                 <div className="projectTitle border border-light rounded-sm p-1">
                     <p className="text-center"> {props.title} </p>

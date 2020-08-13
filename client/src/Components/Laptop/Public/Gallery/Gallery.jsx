@@ -5,20 +5,21 @@ const Gallery = props =>{
     
     const [Img,setImg]= useState("");
     const [ImgAlt,setImgAlt] =useState("");
-    const list = props.list;
+    const [Desc,setDesc] =useState("");
+    const project = props.data;
+    const list = project.images;
     const getImgLink = e =>{
-        console.log(e);
-        list.filter(img => img.imglink===e).map((e,i) => {
-            setImg(e.imglink);
-            setImgAlt(e.imgalt);
-        });
+        const select = list.find(img => img.imglink===e);
+        setImg(select.imglink);
+        setImgAlt(select.imgalt);
+        setDesc(select.desc);
     };
     return(
         <div className={`${props.className}`} style={props.style}>
             {list.map( (e,i) =>
                 <>
                     <GalleryItems
-                        key={i}
+                        keymap={`${project.title}${e.imgalt}${i}`}
                         className={props.itemClassName}
                         style={props.itemStyle}
                         title={e.desc}
@@ -31,21 +32,26 @@ const Gallery = props =>{
                 </>
             )}
             <Modal ModalId="showImage">
-                <div className="d-flex flex-column justify-content-start align-items-end" 
-                style={{height: 85+"vh", width: 85+"vw"}}>
-                    <button type="button " 
+                <div className="d-flex flex-column align-items-end" 
+                style={{height: 80+"%", width: 80+"%"}}>
+                    <div className="w-100 d-flex justify-content-between align-items-center font-weight-bold bg-dark">
+                        <div className="w-100 text-center font-weight-bold">{Desc}</div>
+                        <button type="button " 
                             className="btn btn-danger font-weight-bold" 
                             data-dismiss="modal"
                             // style={closeButton}
                             >&times;
-                    </button>
+                        </button>
+                    </div>
+                    
 
-                    <div className="w-100 h-fit d-flex justify-content-center align-items-start bg-dark" >
-                        <img className="" 
-                             style={{
-                                 maxWidth: 100+"%",
-                                //  minHeight: 100+"%",
-
+                    <div className="w-100 d-flex justify-content-center overflow-hidden p-3 " 
+                         style={{
+                            backgroundColor: "rgba(255,255,255,0.7)"
+                         }}>
+                        <img style={{
+                                // maxWidth: 100+"%",
+                                // maxHeight: 100+"%",
                                 objectFit: "scale-down"
                              }} 
                             src={Img} 

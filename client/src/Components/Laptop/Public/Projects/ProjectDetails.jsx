@@ -12,10 +12,10 @@ const ProjectDetails = props => {
         <div className={`${props.className} d-flex flex-column w-100 p-2`} style={props.style}>
             <nav className="btn-group align-self-start">
                 <span className={`${props.Theme.btn} `} onClick={e=> setShowDetails(true)}>
-                    Details
+                    Features
                 </span>
                 <span className={`${props.Theme.btn} `} onClick={e=> setShowDetails(false)}>
-                    Images
+                    Gallery
                 </span>
             </nav>
             
@@ -28,14 +28,14 @@ const ProjectDetails = props => {
                     </p>
                     <ul style={{marginLeft:  (-25)+"px"}}>
                         {project.features.map((f,j)=>
-                            <li key={j} >{f}</li>
+                            <li key={`${j} ${project.title} fearture`} >{f}</li>
                         )}
                     </ul>
                     <p className="h5 font-weight-bold text-warning">Technologies:</p>
                     <div className="d-flex flex-wrap w-100">
                         {project.technologies.map((t,k) =>
                             <>
-                                <Card key={k} imglink={t.imglink} imgalt={t.imgalt}>{t.techName}</Card>
+                                <Card keymap={`${k} ${project.title} ${t.techName}`} imglink={t.imglink} imgalt={t.imgalt}>{t.techName}</Card>
                             </>
                         )}
                     </div>
@@ -50,7 +50,7 @@ const ProjectDetails = props => {
                             // objectFit: "scale-down"
                             // width: 20+"vh"
                         }}
-                        list={project.images}
+                        data={project}
                     />
                 }
                 </>

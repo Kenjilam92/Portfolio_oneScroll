@@ -24,14 +24,14 @@ const Projects = props =>{
     // };
 
     return(
-        <div className={`${props.className} d-flex flex-column`} style={props.style}>
+        <div className={`${props.className} d-flex flex-column`} style={props.style} id={props.id}>
             <p className="h1 text-warning">Projects</p>
             <div className="d-flex align-self-start">
                 {/* <Carousel {...settings}> */}
                 {/* </Carousel>   */} 
                 {projectsList.map((e,i)=><>
                     <ProjectButton
-                        key={i}
+                        keymap={i+"ProjectButton"}
                         title={e.title}
                         logo={e.logo}
                         selectProject={setProjectName}
@@ -41,7 +41,7 @@ const Projects = props =>{
             </div>
             <ProjectDetails
                 className="text-white"
-                style={{backgroundColor: "rgba(0, 0, 0, 0.5)"}}
+                style={{backgroundColor: "rgba(0, 0, 0, 0.5)", height:"fit-content"}}
                 Theme={props.Theme}
                 Project={projectsList.find( p => p.title===projectName)}
             />
