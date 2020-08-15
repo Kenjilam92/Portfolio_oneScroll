@@ -9,7 +9,7 @@ import Menu from "./Public/Menu";
 import SocialLink from "./Public/SocialLink";
 
 const Laptop = props =>{
-    const img1 = "/images/kenjilam_baltimore.png";
+    const img1 = "/images/kenjilam_baltimore.jpg";
     const backGround = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${img1}")`,
         width: 100+"vw",

@@ -233,7 +233,7 @@ const ProjectList = [
       ],
       images:[
         {
-            imglink:"/images/project/myportfolio/laptophomepage.png",
+            imglink:"/images/project/myportfolio/laptophomepage.jpg",
             imgalt: "kenjilam",
             desc: "Laptop Home Page" 
         },
