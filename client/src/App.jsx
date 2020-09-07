@@ -3,6 +3,7 @@ import {useState,useEffect} from 'react';
 import axios from 'axios';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import json2mq from 'json2mq';
+import  {Router} from "@reach/router";
 /////////////CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/js/dist/modal.js";
@@ -11,6 +12,13 @@ import "./App.css";
 /////////////Components
 import Phone from "./Components/Phone/Phone";
 import Laptop from "./Components/Laptop/Laptop";
+import Progressing from "./Components/General/Progressing";
+import Error404 from "./Components/General/Error404";
+import Login from "./Components/General/Login";
+import MessagesP from "./Components/General/Messages";
+import Invitation from "./Components/General/Invitation";
+import Admin from "./Components/General/Admin";
+import UserPage from "./Components/General/UserPage";
 // import Tablet from "./Components/Tablet";
 
 function App() {
@@ -52,8 +60,10 @@ function App() {
   /////////// Render
   return(
     <>
+    <Router>
       {matches?
       <Phone
+        path="/"
         LoginStatus = {LoginStatus}
         setLoginStatus = {setLoginStatus}
         User={User}
@@ -63,6 +73,7 @@ function App() {
       />  
       :
       <Laptop
+        path="/"
         LoginStatus = {LoginStatus}
         setLoginStatus = {setLoginStatus}
         User={User}
@@ -71,6 +82,33 @@ function App() {
         setTheme = {setTheme}
       />
       }
+      <Progressing path ="/progressing"/>
+      <Error404    path ="*"/>
+
+      <Login      path ="/login"
+                  loginStatus={LoginStatus}
+                  login={setLoginStatus}
+                  user={User}
+                  setUser={setUser}/>
+
+      <MessagesP  path ="/messages"   
+                  login={LoginStatus} 
+                  user={User}/>
+
+      <Invitation path ="/invitation"
+                  user={User}
+                  login={LoginStatus}/>
+
+      <Admin      path ="/admin"      
+                  user={User}
+                  login={LoginStatus}
+                  />
+
+      <UserPage   path ="/blog"
+                  checkSession={CheckBackEndSession}
+                  user={User}
+                  login={LoginStatus}/>
+    </Router>
     </>
   );
 }

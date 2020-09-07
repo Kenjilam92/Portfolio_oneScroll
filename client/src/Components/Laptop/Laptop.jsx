@@ -8,6 +8,11 @@ import Projects from "./Public/Projects/Projects";
 import Menu from "./Public/Menu";
 import SocialLink from "./Public/SocialLink";
 
+///APIs
+import MenuAPI from "../../APIs/MenuAPI";
+
+
+/////////
 const Laptop = props =>{
     const img1 = "/images/kenjilam_baltimore.jpg";
     const backGround = {
@@ -26,33 +31,6 @@ const Laptop = props =>{
         marginBottom: 30+"vh",
     }
 
-    ///////Menu
-    const MenuAPI =[
-        {
-            title: "Home",
-            id: "MenuHome",
-            section: "Home",
-            url: "/"
-        },
-        {
-            title: "About Me",
-            id: "MenuAboutMe",
-            section: "AboutMe",
-            url: "/aboutme"
-        },
-        {
-            title: "Projects",
-            id: "MenuProjects",
-            section: "Projects",
-            url: "/projects"
-        },
-        {
-            title: "Contact",
-            id: "MenuContact",
-            section: "Contact",
-            url: "/contact"
-        }
-    ]
     
     const showSection = (e) =>{
         var selectedLocation = document.getElementById(e);
@@ -95,8 +73,9 @@ const Laptop = props =>{
             <Home
                 className="text-white text-center text-nowrap pt-5 w-100" 
                 Theme={props.Theme}
-                style={SectionsHeight
-                }
+                style={SectionsHeight}
+                nameStyle={{fontSize: 35+"pt"}}
+                titleStyle={{fontSize: 14+"pt"}}
                 id="Home"
                 click={showSection}
             />

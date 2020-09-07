@@ -8,6 +8,12 @@ import Projects from "./Public/Projects/Projects";
 import Menu from "./Public/Menu";
 import SocialLink from "./Public/SocialLink";
 
+///APIs
+import MenuAPI from "../../APIs/MenuAPI";
+
+
+/////////
+
 const Phone = props =>{
     const img1 = "/images/kenjilam_mountain.jpg";
     const backGround = {
@@ -33,33 +39,7 @@ const Phone = props =>{
     }
 
     ///////Menu
-    const MenuAPI =[
-        {
-            title: "Home",
-            id: "MenuHome",
-            section: "Home",
-            url: "/"
-        },
-        {
-            title: "About Me",
-            id: "MenuAboutMe",
-            section: "AboutMe",
-            url: "/aboutme"
-        },
-        {
-            title: "Projects",
-            id: "MenuProjects",
-            section: "Projects",
-            url: "/projects"
-        },
-        {
-            title: "Contact",
-            id: "MenuContact",
-            section: "Contact",
-            url: "/contact"
-        }
-    ]
-    
+        
     const showSection = (e) =>{
         var selectedLocation = document.getElementById(e);
         selectedLocation.scrollIntoView({ behavior: "smooth" });
